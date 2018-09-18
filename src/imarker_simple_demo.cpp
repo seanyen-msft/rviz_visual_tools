@@ -39,6 +39,8 @@
 #ifndef RVIZ_VISUAL_TOOLS_IMARKER_SIMPLE_DEMO_H
 #define RVIZ_VISUAL_TOOLS_IMARKER_SIMPLE_DEMO_H
 
+#define _USE_MATH_DEFINES
+
 // ROS
 #include <ros/ros.h>
 #include <rviz_visual_tools/rviz_visual_tools.h>

@@ -36,6 +36,8 @@
    Desc:   Helper functions for displaying basic shape markers in Rviz
 */
 
+#define _USE_MATH_DEFINES
+
 #include <rviz_visual_tools/rviz_visual_tools.h>
 
 // Conversions
@@ -110,7 +112,7 @@ bool RvizVisualTools::loadRvizMarkers()
   // Set the marker type.
   arrow_marker_.type = visualization_msgs::Marker::ARROW;
   // Set the marker action.  Options are ADD and DELETE
-  arrow_marker_.action = visualization_msgs::Marker::ADD;
+  arrow_marker_.action = visualization_msgs::Marker::MK_ADD;
   // Lifetime
   arrow_marker_.lifetime = marker_lifetime_;
 
@@ -123,7 +125,7 @@ bool RvizVisualTools::loadRvizMarkers()
   // Set the marker type.
   cuboid_marker_.type = visualization_msgs::Marker::CUBE;
   // Set the marker action.  Options are ADD and DELETE
-  cuboid_marker_.action = visualization_msgs::Marker::ADD;
+  cuboid_marker_.action = visualization_msgs::Marker::MK_ADD;
   // Lifetime
   cuboid_marker_.lifetime = marker_lifetime_;
 
@@ -136,7 +138,7 @@ bool RvizVisualTools::loadRvizMarkers()
   // Set the marker type.
   line_strip_marker_.type = visualization_msgs::Marker::LINE_STRIP;
   // Set the marker action.  Options are ADD and DELETE
-  line_strip_marker_.action = visualization_msgs::Marker::ADD;
+  line_strip_marker_.action = visualization_msgs::Marker::MK_ADD;
   // Lifetime
   line_strip_marker_.lifetime = marker_lifetime_;
 
@@ -149,7 +151,7 @@ bool RvizVisualTools::loadRvizMarkers()
   // Set the marker type.
   line_list_marker_.type = visualization_msgs::Marker::LINE_LIST;
   // Set the marker action.  Options are ADD and DELETE
-  line_list_marker_.action = visualization_msgs::Marker::ADD;
+  line_list_marker_.action = visualization_msgs::Marker::MK_ADD;
   // Lifetime
   line_list_marker_.lifetime = marker_lifetime_;
   // Constants
@@ -171,7 +173,7 @@ bool RvizVisualTools::loadRvizMarkers()
   // Set the marker type.
   spheres_marker_.type = visualization_msgs::Marker::SPHERE_LIST;
   // Set the marker action.  Options are ADD and DELETE
-  spheres_marker_.action = visualization_msgs::Marker::ADD;
+  spheres_marker_.action = visualization_msgs::Marker::MK_ADD;
   // Lifetime
   spheres_marker_.lifetime = marker_lifetime_;
   // Constants
@@ -190,7 +192,7 @@ bool RvizVisualTools::loadRvizMarkers()
   // ID
   block_marker_.ns = "Block";
   // Set the marker action.  Options are ADD and DELETE
-  block_marker_.action = visualization_msgs::Marker::ADD;
+  block_marker_.action = visualization_msgs::Marker::MK_ADD;
   // Set the marker type.
   block_marker_.type = visualization_msgs::Marker::CUBE;
   // Lifetime
@@ -199,7 +201,7 @@ bool RvizVisualTools::loadRvizMarkers()
   // Load Cylinder ----------------------------------------------------
   cylinder_marker_.header.frame_id = base_frame_;
   // Set the marker action.  Options are ADD and DELETE
-  cylinder_marker_.action = visualization_msgs::Marker::ADD;
+  cylinder_marker_.action = visualization_msgs::Marker::MK_ADD;
   // Set the marker type.
   cylinder_marker_.type = visualization_msgs::Marker::CYLINDER;
   // Lifetime
@@ -209,7 +211,7 @@ bool RvizVisualTools::loadRvizMarkers()
   mesh_marker_.header.frame_id = base_frame_;
 
   // Set the marker action.  Options are ADD and DELETE
-  mesh_marker_.action = visualization_msgs::Marker::ADD;
+  mesh_marker_.action = visualization_msgs::Marker::MK_ADD;
   // Set the marker type.
   mesh_marker_.type = visualization_msgs::Marker::MESH_RESOURCE;
   // Lifetime
@@ -223,7 +225,7 @@ bool RvizVisualTools::loadRvizMarkers()
   // Set the marker type.
   sphere_marker_.type = visualization_msgs::Marker::SPHERE;
   // Set the marker action.  Options are ADD and DELETE
-  sphere_marker_.action = visualization_msgs::Marker::ADD;
+  sphere_marker_.action = visualization_msgs::Marker::MK_ADD;
   // Marker group position and orientation
   sphere_marker_.pose.position.x = 0;
   sphere_marker_.pose.position.y = 0;
@@ -244,7 +246,7 @@ bool RvizVisualTools::loadRvizMarkers()
   // ID
   text_marker_.ns = "Text";
   // Set the marker action.  Options are ADD and DELETE
-  text_marker_.action = visualization_msgs::Marker::ADD;
+  text_marker_.action = visualization_msgs::Marker::MK_ADD;
   // Set the marker type.
   text_marker_.type = visualization_msgs::Marker::TEXT_VIEW_FACING;
   // Lifetime
@@ -255,7 +257,7 @@ bool RvizVisualTools::loadRvizMarkers()
   triangle_marker_.header.frame_id = base_frame_;
   triangle_marker_.ns = "Triangle";
   // Set the marker action. Options are ADD and DELETE
-  triangle_marker_.action = visualization_msgs::Marker::ADD;
+  triangle_marker_.action = visualization_msgs::Marker::MK_ADD;
   // Set the marker type
   triangle_marker_.type = visualization_msgs::Marker::TRIANGLE_LIST;
   // Lifetime

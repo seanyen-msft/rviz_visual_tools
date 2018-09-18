@@ -37,6 +37,8 @@
            To use, add a Rviz Marker Display subscribed to topic /rviz_visual_tools
 */
 
+#define _USE_MATH_DEFINES
+
 // ROS
 #include <ros/ros.h>
 
