@@ -9,8 +9,6 @@ if(NOT MSVC)
     -Wwrite-strings -Wunreachable-code -Wpointer-arith
     -Winit-self -Wredundant-decls
     -Wno-unused-parameter -Wno-unused-function)
-else()
-  add_compile_options(/Zc:__cplusplus)
 endif()
 
 set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
