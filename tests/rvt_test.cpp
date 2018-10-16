@@ -36,8 +36,6 @@
    Desc:   Test for Rviz Visual tools
 */
 
-#define _USE_MATH_DEFINES
-
 // C++
 #include <string>
 #include <vector>
